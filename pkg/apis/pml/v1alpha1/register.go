@@ -1,15 +1,13 @@
 package v1alpha1
 
 import (
-	"github.com/william-lbn/hypernode/pkg/apis/mycontroller"
-
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/runtime/schema"
 )
 
 var SchemeGroupVersion = schema.GroupVersion{
-	Group:   mycontroller.GroupName,
+	Group:   "pml",
 	Version: "v1alpha1",
 }
 
@@ -32,10 +30,9 @@ var (
 
 // Adds the list of known types to Scheme.
 func addKnownTypes(scheme *runtime.Scheme) error {
-	scheme.AddKnownTypes(SchemeGroupVersion,
-		&Website{},
-		&WebsiteList{},
-	)
+	scheme.AddKnownTypes(SchemeGroupVersion) //&HyperNode{},
+	//&HyperNodeList{},
+
 	metav1.AddToGroupVersion(scheme, SchemeGroupVersion)
 	return nil
 }
