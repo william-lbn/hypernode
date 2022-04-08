@@ -1,0 +1,8 @@
+apiVersion: pml.com/v1alpha1
+kind: HyperNode
+metadata:
+  name: example-hypernode
+spec:
+  supervisorName: test1
+  myAreaName: test2
+  nodeAreaType: test3

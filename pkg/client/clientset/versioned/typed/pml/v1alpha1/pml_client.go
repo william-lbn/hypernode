@@ -31,7 +31,7 @@ type PmlV1alpha1Interface interface {
 	HyperNodesGetter
 }
 
-// PmlV1alpha1Client is used to interact with features provided by the pml group.
+// PmlV1alpha1Client is used to interact with features provided by the pml.com group.
 type PmlV1alpha1Client struct {
 	restClient rest.Interface
 }

@@ -36,9 +36,9 @@ type FakeHyperNodes struct {
 	ns   string
 }
 
-var hypernodesResource = schema.GroupVersionResource{Group: "pml", Version: "v1alpha1", Resource: "hypernodes"}
+var hypernodesResource = schema.GroupVersionResource{Group: "pml.com", Version: "v1alpha1", Resource: "hypernodes"}
 
-var hypernodesKind = schema.GroupVersionKind{Group: "pml", Version: "v1alpha1", Kind: "HyperNode"}
+var hypernodesKind = schema.GroupVersionKind{Group: "pml.com", Version: "v1alpha1", Kind: "HyperNode"}
 
 // Get takes name of the hyperNode, and returns the corresponding hyperNode object, and an error if there is any.
 func (c *FakeHyperNodes) Get(ctx context.Context, name string, options v1.GetOptions) (result *v1alpha1.HyperNode, err error) {

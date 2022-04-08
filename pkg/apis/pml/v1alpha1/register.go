@@ -7,7 +7,7 @@ import (
 )
 
 var SchemeGroupVersion = schema.GroupVersion{
-	Group:   "pml",
+	Group:   "pml.com",
 	Version: "v1alpha1",
 }
 
@@ -30,8 +30,10 @@ var (
 
 // Adds the list of known types to Scheme.
 func addKnownTypes(scheme *runtime.Scheme) error {
-	scheme.AddKnownTypes(SchemeGroupVersion) //&HyperNode{},
-	//&HyperNodeList{},
+	scheme.AddKnownTypes(SchemeGroupVersion,
+		&HyperNode{},
+		&HyperNodeList{},
+	)
 
 	metav1.AddToGroupVersion(scheme, SchemeGroupVersion)
 	return nil
